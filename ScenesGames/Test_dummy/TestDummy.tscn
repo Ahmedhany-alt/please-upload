@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b3tm118ymlfuj"]
+
+[ext_resource type="Script" uid="uid://cqqf3gxn1bc3y" path="res://ScriptsGames/test_dummy.gd" id="1_6b6g0"]
+[ext_resource type="Script" uid="uid://dcxhc3c8gsyne" path="res://ScriptsGames/hit_particle_settings.gd" id="2_8wjft"]
+[ext_resource type="Texture2D" uid="uid://4i6ynv10jf3i" path="res://AssetsGames/props_destructible.png" id="2_d5l2i"]
+[ext_resource type="Script" uid="uid://bs3f202rvla4j" path="res://ScriptsGames/damage_area.gd" id="3_8wjft"]
+[ext_resource type="Resource" uid="uid://dx3yrninkjviu" path="res://ScriptsGames/hit_magic_red.tres" id="3_32snk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rg401"]
+load_path = "res://.godot/imported/props_destructible.png-6fc2c4f38ad60b3f502e516fc1e48f38.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wx8y1"]
+size = Vector2(14, 36)
+
+[node name="TestDummy" type="Node2D" unique_id=2060469178]
+position = Vector2(0, -7)
+script = ExtResource("1_6b6g0")
+particles = Array[ExtResource("2_8wjft")]([ExtResource("3_32snk")])
+
+[node name="BaseSprite2D" type="Sprite2D" parent="." unique_id=453407674]
+texture = ExtResource("2_d5l2i")
+region_enabled = true
+region_rect = Rect2(16, 52, 16, 11)
+
+[node name="BodySprite" type="Sprite2D" parent="." unique_id=861429757]
+position = Vector2(0, -4)
+texture = SubResource("CompressedTexture2D_rg401")
+offset = Vector2(0, -19)
+region_enabled = true
+region_rect = Rect2(17, 10, 14, 39)
+
+[node name="DamageArea" type="Area2D" parent="." unique_id=718873405]
+collision_layer = 32
+collision_mask = 0
+script = ExtResource("3_8wjft")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea" unique_id=1319403959]
+position = Vector2(0, -25)
+shape = SubResource("RectangleShape2D_wx8y1")
+debug_color = Color(0.33690244, 0.008924858, 0.029233746, 0.41960785)
