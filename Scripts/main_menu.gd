@@ -4,8 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+		PlayerHud.hide_hud()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -55,3 +54,4 @@ func _on_previous_button_pressed() -> void:
 
 func _on_next_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
+	

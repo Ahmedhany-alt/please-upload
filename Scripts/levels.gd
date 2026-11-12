@@ -67,7 +67,7 @@ func _ready() -> void:
 
 	if not _validate_nodes():
 		return
-
+	_update_level_access()
 	_setup_terminal()
 	_setup_header()
 	_setup_chat_history()
@@ -696,3 +696,23 @@ func _on_back_button_pressed() -> void:
 func _on_open_terminal_button_pressed() -> void:
 	$"SFX/Terminal power on player".play()
 	$AnimationPlayer.play("power on button pressed")
+
+
+
+
+func _update_level_access() -> void:
+	for level_number in range(1, 4):
+		if Progressmanager.is_level_unlocked(level_number):
+			level_status[level_number] = "AVAILABLE"
+		else:
+			level_status[level_number] = "LOCKED"
+
+	print("ECHO: Level access updated.")
+
+	for level_number in range(1, 4):
+		print(
+			"ECHO: Level ",
+			level_number,
+			" status = ",
+			level_status[level_number]
+		)

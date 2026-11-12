@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bcjk684mcs6mh"]
 
 [ext_resource type="Script" uid="uid://dxmcho7nva8te" path="res://ScriptsGames/player.gd" id="1_ulp21"]
-[ext_resource type="Script" uid="uid://c2yr5hnhl100o" path="res://ScriptsGames/00_player_state.gd" id="2_sdcch"]
 [ext_resource type="Script" uid="uid://ty0ec8xbb4l4" path="res://ScriptsGames/idle.gd" id="2_wnvi2"]
 [ext_resource type="Script" uid="uid://cl02flc8glx1u" path="res://ScriptsGames/run.gd" id="3_83hs8"]
 [ext_resource type="Script" uid="uid://h08tf662qlls" path="res://ScriptsGames/jump.gd" id="4_x8kxw"]
@@ -364,7 +363,6 @@ collision_mask = 43
 script = ExtResource("1_ulp21")
 
 [node name="States" type="Node" parent="." unique_id=798689250]
-script = ExtResource("2_sdcch")
 
 [node name="Idle" type="Node" parent="States" unique_id=1431762602]
 unique_name_in_owner = true

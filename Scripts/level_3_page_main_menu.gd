@@ -36,7 +36,7 @@ func _ready() -> void:
 	_apply_review_mode()
 	_prepare_progress()
 	_prepare_all_text()
-
+	_update_initiate_button()
 	await get_tree().create_timer(start_delay).timeout
 
 	animate_progress()
@@ -285,3 +285,16 @@ func _apply_review_mode() -> void:
 
 func _on_ifm_button_2_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
+	LoadingScreen.change_scene("res://ScenesGames/Levels&&&/level_4.tscn")
+
+
+func _update_initiate_button() -> void:
+	var initiate_button := get_node_or_null(
+		"main level page container/main panel level page container/IFM Button control/IFM Button2"
+	) as BaseButton
+
+	if initiate_button:
+		initiate_button.disabled = not Progressmanager.is_level_unlocked(3)
+		print("ECHO: Level 3 Initiate disabled = ", initiate_button.disabled)
+	else:
+		push_error("ECHO: Level 3 Initiate Button not found.")

@@ -61,6 +61,17 @@ nine_patch_stretch = true
 texture_under = SubResource("GradientTexture2D_6nv6n")
 texture_progress = SubResource("GradientTexture2D_cpdn7")
 
+[node name="CoinLabel" type="Label" parent="Control" unique_id=1876139574]
+unique_name_in_owner = true
+z_index = 2
+layout_mode = 0
+offset_left = 13.0
+offset_top = 32.0
+offset_right = 53.0
+offset_bottom = 55.0
+theme_override_font_sizes/font_size = 22
+text = "Coins: 0"
+
 [node name="GameOver" type="Control" parent="Control" unique_id=26087627]
 unique_name_in_owner = true
 layout_mode = 1
@@ -117,10 +128,3 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 text = "Replay"
-
-[node name="CoinLabel" type="Label" parent="." unique_id=1876139574]
-unique_name_in_owner = true
-offset_left = 13.0
-offset_top = 32.0
-offset_right = 53.0
-offset_bottom = 55.0

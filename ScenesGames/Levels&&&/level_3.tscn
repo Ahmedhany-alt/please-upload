@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cufn8fqb476sf"]
 
+[ext_resource type="Script" uid="uid://g21po73ruw2f" path="res://ScenesGames/Levels&&&/level_3.gd" id="1_3ejwr"]
 [ext_resource type="Texture2D" uid="uid://durffmgv8gbmp" path="res://AssetsGames/Tilesets&&&/cave_parallax_dark/cave_back.png" id="1_plhyh"]
 [ext_resource type="Texture2D" uid="uid://re3hkk4w13mx" path="res://AssetsGames/Tilesets&&&/cave_parallax_dark/cave_mid.png" id="2_rq5ar"]
 [ext_resource type="TileSet" uid="uid://cy2ne0v721au0" path="res://AssetsGames/Tilesets&&&/Forgotten_forest.tres" id="3_753rs"]
@@ -11,6 +12,7 @@
 [ext_resource type="Script" uid="uid://2hoxyw57lky3" path="res://ScriptsGames/camera.gd" id="9_ymvce"]
 [ext_resource type="PackedScene" uid="uid://bxc4i6ax61hha" path="res://ScenesGames/Machroom.tscn" id="11_vuiqa"]
 [ext_resource type="PackedScene" uid="uid://d2sv64mh8tkb5" path="res://ScenesGames/Slime_2/Slime2.tscn" id="11_ymvce"]
+[ext_resource type="PackedScene" uid="uid://bwbcbpeisgkf8" path="res://ScenesGames/end trophy .tscn" id="13_7otu5"]
 
 [sub_resource type="Gradient" id="Gradient_uv246"]
 offsets = PackedFloat32Array(0)
@@ -58,6 +60,7 @@ sources/0 = SubResource("TileSetAtlasSource_ay5qi")
 sources/1 = SubResource("TileSetAtlasSource_28e0t")
 
 [node name="Level3" type="Node2D" unique_id=104898313]
+script = ExtResource("1_3ejwr")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=754424496]
 scroll_scale = Vector2(0.1, 0.1)
@@ -238,3 +241,7 @@ position = Vector2(1591, 455)
 
 [node name="Slime11" parent="." unique_id=1867035232 instance=ExtResource("11_ymvce")]
 position = Vector2(427, 459)
+
+[node name="Area2D" parent="." unique_id=4732090 instance=ExtResource("13_7otu5")]
+position = Vector2(5466, 960)
+level_number = 2

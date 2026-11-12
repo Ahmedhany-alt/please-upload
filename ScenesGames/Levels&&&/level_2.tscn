@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://7lfbi1davun4"]
 
+[ext_resource type="Script" uid="uid://ccpad8i05i67x" path="res://ScenesGames/Levels&&&/level_2.gd" id="1_8qv3k"]
 [ext_resource type="Texture2D" uid="uid://bea6erd1ui7o6" path="res://AssetsGames/Tilesets&&&/forest_layers/1_sky.png" id="1_uuiq4"]
 [ext_resource type="Texture2D" uid="uid://ocofb5nvqomm" path="res://AssetsGames/Tilesets&&&/forest_layers/2_far.svg" id="2_6gwo5"]
 [ext_resource type="TileSet" uid="uid://cy2ne0v721au0" path="res://AssetsGames/Tilesets&&&/Forgotten_forest.tres" id="3_ysfyr"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c0871ofr7ivq2" path="res://ScenesGames/Test_dummy/SpikeDummy.tscn" id="13_rx231"]
 [ext_resource type="PackedScene" uid="uid://ds1d21bt5lpq8" path="res://ScenesGames/Test_dummy/slam_breakable.tscn" id="14_7gaik"]
 [ext_resource type="PackedScene" uid="uid://bwg6cbxkt2ksc" path="res://ScenesGames/Test_dummy/breakable.tscn" id="15_eu75v"]
+[ext_resource type="PackedScene" uid="uid://bwbcbpeisgkf8" path="res://ScenesGames/end trophy .tscn" id="18_vjl8y"]
 
 [sub_resource type="Gradient" id="Gradient_uv246"]
 offsets = PackedFloat32Array(0)
@@ -63,6 +65,7 @@ sources/0 = SubResource("TileSetAtlasSource_ay5qi")
 sources/1 = SubResource("TileSetAtlasSource_fa81k")
 
 [node name="Level2" type="Node2D" unique_id=104898313]
+script = ExtResource("1_8qv3k")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=754424496]
 scroll_scale = Vector2(0.1, 0.1)
@@ -256,3 +259,6 @@ position = Vector2(2460, 562)
 
 [node name="coin" parent="." unique_id=1090193632 instance=ExtResource("11_wb0km")]
 position = Vector2(490, 552)
+
+[node name="Area2D" parent="." unique_id=4732090 instance=ExtResource("18_vjl8y")]
+position = Vector2(5439, 128)

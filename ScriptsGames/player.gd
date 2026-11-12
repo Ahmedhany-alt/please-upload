@@ -46,12 +46,12 @@ var previous_state: PlayerState:
 var hp: float = 3:
 	set(value):
 		hp = clampf(value, 0, max_hp)
-		Messsages.player_health_changed.emit(hp, max_hp)
+		Messages.player_health_changed.emit(hp, max_hp)
 
 var max_hp: float = 3:
 	set(value):
 		max_hp = value
-		Messsages.player_health_changed.emit(hp, max_hp)
+		Messages.player_health_changed.emit(hp, max_hp)
 #endregion
 
 #region Abilities

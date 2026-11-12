@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dkydyqf0gjuxa"]
 
 [ext_resource type="Texture2D" uid="uid://dy0qk1bye1gbi" path="res://AssetsGames/Tilesets&&&/cave_parallax_2/cave_back.png" id="1_jobl8"]
+[ext_resource type="Script" uid="uid://dybylp2jblcdj" path="res://ScenesGames/Levels&&&/level_4.gd" id="1_ujkv0"]
 [ext_resource type="Texture2D" uid="uid://dc1gtxsqbkqp0" path="res://AssetsGames/Tilesets&&&/cave_parallax_2/cave_far.png" id="2_3dn5l"]
 [ext_resource type="TileSet" uid="uid://cy2ne0v721au0" path="res://AssetsGames/Tilesets&&&/Forgotten_forest.tres" id="3_2t5f1"]
 [ext_resource type="Texture2D" uid="uid://bwbupgie36wtp" path="res://AssetsGames/Tilesets&&&/cave_parallax_2/cave_mid.png" id="4_deunm"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ds1d21bt5lpq8" path="res://ScenesGames/Test_dummy/slam_breakable.tscn" id="14_8y4ib"]
 [ext_resource type="PackedScene" uid="uid://bwg6cbxkt2ksc" path="res://ScenesGames/Test_dummy/breakable.tscn" id="15_dd88a"]
 [ext_resource type="PackedScene" uid="uid://bxc4i6ax61hha" path="res://ScenesGames/Machroom.tscn" id="16_7qdr2"]
+[ext_resource type="PackedScene" uid="uid://bwbcbpeisgkf8" path="res://ScenesGames/end trophy .tscn" id="18_d5nud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ay5qi"]
 texture = ExtResource("7_qw1w8")
@@ -52,6 +54,7 @@ sources/0 = SubResource("TileSetAtlasSource_ay5qi")
 sources/1 = SubResource("TileSetAtlasSource_28e0t")
 
 [node name="Level4" type="Node2D" unique_id=104898313]
+script = ExtResource("1_ujkv0")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=754424496]
 scroll_scale = Vector2(0.1, 0.1)
@@ -298,3 +301,6 @@ position = Vector2(4131, 1083)
 
 [node name="Slime26" parent="." unique_id=737024185 instance=ExtResource("16_7qdr2")]
 position = Vector2(3130, 1061)
+
+[node name="Area2D" parent="." unique_id=4732090 instance=ExtResource("18_d5nud")]
+position = Vector2(5468, 30)

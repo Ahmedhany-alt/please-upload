@@ -147,3 +147,4 @@ func _on_footer_button_pressed() -> void:
 
 func _on_initiate_mission_button_pressed() -> void:
 	$SFX/SFXClickPlayer.play()
+	LoadingScreen.change_scene("res://ScenesGames/Levels&&&/level_2.tscn")
